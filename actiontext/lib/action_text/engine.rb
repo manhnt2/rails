@@ -35,8 +35,8 @@ module ActionText
     end
 
     initializer "action_text.renderer" do |app|
-      app.executor.to_run      { ActionText::Content.renderer = ApplicationController.renderer }
-      app.executor.to_complete { ActionText::Content.renderer = ApplicationController.renderer }
+      #app.executor.to_run      { ActionText::Content.renderer = ApplicationController.renderer }
+      #app.executor.to_complete { ActionText::Content.renderer = ApplicationController.renderer }
 
       ActiveSupport.on_load(:action_text_content) do
         self.renderer = ApplicationController.renderer
